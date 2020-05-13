@@ -4,6 +4,9 @@ import edu.princeton.cs.algs4.*;
 
 import java.util.*;
 
+import static com.mbao.algo.MainClient.HOME_DIR;
+import static com.mbao.algo.MainClient.TEST_DATA_RELATIVE_DIR;
+
 public class MDijkstra {
   private double[] distTo;
   private DirectedEdge[] edgeTo;
@@ -96,7 +99,7 @@ public class MDijkstra {
 
 
   public static void main(String[] args) {
-    In in = new In("/Users/mbao/Workspace/Algorithms4/algs4-data/tinyEWD.txt");
+    In in = new In(HOME_DIR + TEST_DATA_RELATIVE_DIR + "tinyEWD.txt");
     EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
     int s = 4;
 

@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+import static com.mbao.algo.MainClient.HOME_DIR;
+import static com.mbao.algo.MainClient.TEST_DATA_RELATIVE_DIR;
+
 public class MPrimMST {
   private Edge[] edgeTo;
   private double[] distToTree;
@@ -76,7 +79,7 @@ public class MPrimMST {
 
 
   public static void main(String[] args) {
-    In in = new In("/Users/mbao/Workspace/Algorithms4/algs4-data/tinyEWG.txt");
+    In in = new In(HOME_DIR + TEST_DATA_RELATIVE_DIR + "tinyEWG.txt");
     EdgeWeightedGraph G = new EdgeWeightedGraph(in);
 
     PrimMST mst = new PrimMST(G);
