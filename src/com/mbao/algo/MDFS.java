@@ -2,8 +2,8 @@ package com.mbao.algo;
 
 import edu.princeton.cs.algs4.*;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.LinkedList;
 
 import static com.mbao.algo.MainClient.HOME_DIR;
 import static com.mbao.algo.MainClient.TEST_DATA_RELATIVE_DIR;
@@ -28,7 +28,7 @@ public class MDFS {
 
   public Iterable<Integer> pathTo(int v) {
     if (!hasPathTo(v)) return null;
-    Deque<Integer> path = new LinkedList<>();
+    Deque<Integer> path = new ArrayDeque<>();
     int x = v;
     while (pathTo[x] != x) {
       path.push(x);
