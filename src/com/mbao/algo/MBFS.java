@@ -5,8 +5,8 @@ import edu.princeton.cs.algs4.Graph;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
-import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.LinkedList;
 
 import static com.mbao.algo.MainClient.HOME_DIR;
 import static com.mbao.algo.MainClient.TEST_DATA_RELATIVE_DIR;
@@ -35,7 +35,7 @@ public class MBFS {
 
   public Iterable<Integer> pathTo(int v) {
     if (!hasPathTo(v)) return null;
-    Deque<Integer> path = new ArrayDeque<>();
+    Deque<Integer> path = new LinkedList<>();
     int x = v;
     while (edgeTo[x] != x) {
       path.push(x);
@@ -50,7 +50,7 @@ public class MBFS {
   }
 
   private void bfs(Graph G, int s) {
-    Deque<Integer> toProcess = new ArrayDeque<>();
+    Deque<Integer> toProcess = new LinkedList<>();
     visited[s] = true;
     toProcess.offer(s);
     while (!toProcess.isEmpty()) {
