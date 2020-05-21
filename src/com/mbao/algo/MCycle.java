@@ -2,9 +2,9 @@ package com.mbao.algo;
 
 import edu.princeton.cs.algs4.*;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 
 import static com.mbao.algo.MainClient.HOME_DIR;
@@ -50,7 +50,7 @@ public class MCycle {
   private void initDGCycleNormal(Digraph DG) {
     int[] indegree = new int[DG.V()];
     List<Integer> order = new ArrayList<>();
-    Deque<Integer> next = new ArrayDeque<>();
+    Deque<Integer> next = new LinkedList<>();
     for (int v = 0; v < DG.V(); v++) {
       indegree[v] = DG.indegree(v);
     }
@@ -95,7 +95,7 @@ public class MCycle {
         }
 
         // extract cycle
-        cycle = new ArrayDeque<>();
+        cycle = new LinkedList<>();
         int v = root;
         do {
           cycle.push(v);
@@ -115,7 +115,7 @@ public class MCycle {
         dfsUG(G, w, v);
       } else if (w != parent) {
         hasCycle = true;
-        cycle = new ArrayDeque<>();
+        cycle = new LinkedList<>();
         for (int x = v; x != w; x = edgeTo[x]) {
           cycle.push(x);
         }
@@ -135,7 +135,7 @@ public class MCycle {
         dfsDG(DG, w, onStack);
       } else if (onStack[w]) {
         hasCycle = true;
-        cycle = new ArrayDeque<>();
+        cycle = new LinkedList<>();
         for (int x = v; x != w; x = edgeTo[x]) {
           cycle.push(x);
         }

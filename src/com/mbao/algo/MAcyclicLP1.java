@@ -2,9 +2,9 @@ package com.mbao.algo;
 
 import edu.princeton.cs.algs4.*;
 
-import java.util.ArrayDeque;
 import java.util.Comparator;
 import java.util.Deque;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
 
 import static com.mbao.algo.MainClient.HOME_DIR;
@@ -55,7 +55,7 @@ public class MAcyclicLP1 {
 
   public Iterable<DirectedEdge> pathTo(int v) {
     if (!hasPathTo(v)) return null;
-    Deque<DirectedEdge> path = new ArrayDeque<>();
+    Deque<DirectedEdge> path = new LinkedList<>();
     for (int x = v; edgeTo[x] != null; x = edgeTo[x].from()) {
       path.push(edgeTo[x]);
     }
