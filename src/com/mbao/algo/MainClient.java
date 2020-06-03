@@ -1,12 +1,14 @@
 package com.mbao.algo;
 
 import edu.princeton.cs.algs4.*;
+import javafx.util.converter.BigIntegerStringConverter;
+import sun.security.util.BitArray;
 
 public class MainClient {
-  public static final String HOME_DIR = "/Users/mattbao/";
-  public static final String TEST_DATA_RELATIVE_DIR = "LocalWorkspace/algs4-data/";
-//  public static final String HOME_DIR = "/Users/mbao/"; // Uber laptop
-//  public static final String TEST_DATA_RELATIVE_DIR = "Workspace/Algorithms4/algs4-data/"; // Uber laptop
+//  public static final String HOME_DIR = "/Users/mattbao/";
+//  public static final String TEST_DATA_RELATIVE_DIR = "LocalWorkspace/algs4-data/";
+  public static final String HOME_DIR = "/Users/mbao/"; // Uber laptop
+  public static final String TEST_DATA_RELATIVE_DIR = "Workspace/Algorithms4/algs4-data/"; // Uber laptop
 
   public static void main(String[] args) {
     In in = new In(HOME_DIR + TEST_DATA_RELATIVE_DIR + "tinyEWDAG.txt");
@@ -29,5 +31,12 @@ public class MainClient {
     }
 
     StdOut.println();
+
+
+    StdOut.println(Integer.toBinaryString(0));
+    StdOut.println(Integer.toBinaryString(21));
+    StdOut.println(Integer.toBinaryString(-1));
+    StdOut.println(Integer.toBinaryString(1));
+
   }
 }
