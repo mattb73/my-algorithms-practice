@@ -20,7 +20,7 @@ public class MLSD {
    * @param w the number of characters per string
    */
   public static void sort(String[] a, int w) {
-    int R = 256;
+    int R = 256; // ASCII
     String[] aux = new String[a.length];
     for (int k = w - 1; k >= 0; k--) {
       int[] count = new int[R + 1];
